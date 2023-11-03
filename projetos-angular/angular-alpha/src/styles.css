@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* estilo da table para componentes que usurão os atributos indicados abaixo*/
+.bordaTabela {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+ }
+ .bordaTabela td, .bordaTabela th {
+  border: 1px solid #ddd;
+  padding: 8px;
+ }
+ .bordaTabela tr:nth-child(even){background-color: #f2f2f2;}
+ .bordaTabela tr:hover {background-color: #ddd;}
+ .bordaTabela th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #581845;
+  color: white;
+ }

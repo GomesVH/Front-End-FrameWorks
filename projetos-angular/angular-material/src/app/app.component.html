@@ -1,0 +1,32 @@
+<!-- aqui, será implementada a view com os recursos da dependencia Material Design-->
+<table mat-table [dataSource] = "fonteDados" class = "mat-elevation-z8">
+  <!--definição da coluna Posição e seu conteudo-->
+  <ng-container matColumnDef = "Posicao">
+    <th mat-header-cell *matHeaderCellDef>Posição</th>
+    <td mat-cell *matCellDef = "let elemento">{{ elemento.posicao }}</td>
+  </ng-container>
+
+  <!-- definição da Coluna Nome e seu conteudo-->
+  <ng-container matColumnDef = "Nome">
+    <th mat-header-cell *matHeaderCellDef>Nome</th>
+    <td mat-cell *matCellDef = "let elemento">{{ elemento.nome }}</td>
+  </ng-container>
+
+  <!-- definição da Coluna Peso e seu conteudo-->
+  <ng-container matColumnDef = "Peso">
+    <th mat-header-cell *matHeaderCellDef>Peso</th>
+    <td mat-cell *matCellDef = "let elemento">{{ elemento.peso }}</td>
+  </ng-container>
+
+  <!-- definição da Coluna Simbolo e seu conteudo -->
+  <ng-container matColumnDef = "Simbolo">
+    <th mat-header-cell *matHeaderCellDef>Simbolo</th>
+    <td mat-cell *matCellDef = "let elemento">{{ elemento.simbolo }}</td>
+  </ng-container>
+
+  <!-- definir os espaços "inteiros" referentes as colunas e linhas da mat-table-->
+  <tr mat-header-row *matHeaderRowDef = "colunas"></tr>
+
+  <tr mat-row *matRowDef = "row; columns: colunas"></tr>
+</table>
+<mat-paginator [pageSizeOptions] = "[3, 6, 10]" showFirstLastButtons></mat-paginator>

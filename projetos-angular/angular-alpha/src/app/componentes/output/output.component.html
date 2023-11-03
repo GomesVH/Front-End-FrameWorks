@@ -1,0 +1,12 @@
+<div class = "content">
+    <h2>{{ tituloComp }}</h2>
+    <br />
+
+    Informe seu nome: <input type = "text" [(ngModel)] = "conjuntoDados.nome" />
+    Inform seu email: <input type = "email" [(ngModel)] = "conjuntoDados.email" />
+
+    <div class = "box">
+        <input type = "button" value = "Enviando" (click) = "enviarDadosPapai()" />
+    </div>
+
+</div>

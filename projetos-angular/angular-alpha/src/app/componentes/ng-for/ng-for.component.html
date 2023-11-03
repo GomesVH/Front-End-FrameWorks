@@ -1,0 +1,38 @@
+<div class = "content">
+   <h2>{{ tituloComp }}</h2>
+   <!-- definir a tabela -->
+   <table class = "bordaTabela">
+    <thead>
+        <tr>
+            <th>Titulo do filme</th>
+            <th>Direção</th>
+            <th>Elenco principal</th>
+            <th>Ano de Lançamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let f of filmes">
+            <td>{{ f.titulo }}</td>
+            <td>{{ f.direcao }}</td>
+            <td>{{ f.elenco }}</td>
+            <td>{{ f.anoLancamento }}</td>
+        </tr>
+    </tbody>
+   </table>
+</div>
+
+
+
+
+
+
+
+
+
+<!--
+     <ul>
+        <li *ngFor = "let f of filmes">
+            {{ f.titulo }} - {{ f.direcao }}
+        </li>
+    </ul>
+-->

@@ -1,0 +1,50 @@
+<!-- iniciar a implementação do template driven form-->
+<div class = "content">
+    <h2>{{ tituloComp }}</h2>
+    <br />
+
+    <form [formGroup] = "dadosForm" (ngSubmit) = "exibidoraDados(dadosForm.value)">
+        <input type = "text" name = "nome" placeholder = "Informe seu nome" formControlName = "nome" />
+        <br />
+
+        <input type = "email" name = "email" placeholder = "Informe seu email" formControlName = "email" />
+        <br />
+
+        <input type = "password" name = "senha" placeholder = "Informe a senha" formControlName = "senha" />
+        <br />
+
+        <input type = "submit" [disabled] = "!dadosForm.valid" value = "Enviar dados" />
+    </form>
+    <!-- exibir os valores das props nome e email-->
+    <span>O nome informado é: {{ propNome }}. E o email é: {{ propEmail }}</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- iniciar a implementação do template driven form
+<div class = "content">
+    <h2>{{ tituloComp }}</h2>
+    <br />
+
+    <form #capturaDados = "ngForm" (ngSubmit) = "recebedorDados(capturaDados.value)">
+        <input type = "text" name = "nome" placeholder = "Informe seu nome" ngModel />
+        <br />
+
+        <input type = "email" name = "email" placeholder = "Informe seu email" ngModel />
+        <br />
+
+        <input type = "password" name = "senha" placeholder = "Informe a senha" ngModel />
+        <br />
+
+        <input type = "submit" value = "Enviar dados" />
+    </form>
+</div>
+-->

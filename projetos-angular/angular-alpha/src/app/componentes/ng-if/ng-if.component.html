@@ -1,0 +1,50 @@
+<div class = "content">
+    <h2>{{ tituloComp }}</h2>
+
+    <div>
+        Propriedade exiba: <input type = "checkbox" [(ngModel)] = "exiba" />
+    </div>
+
+    <!--uso direto da diretiva *ngIf-->
+    <h3>Uso direto da diretiva *ngIf</h3>
+    <p *ngIf = "exiba"><!-- Prop, qual é seu valor? R: TRUE-->
+        Texto exibido quando o checkbox estiver "ativado" - quando a condição for TRUE 
+    </p>
+    <p *ngIf = "!exiba"><!-- Prop, qual é seu valor? R:FALSE -->
+        Texto exibido quando o checkbox estiver "desativado" - quando a condição for FALSE
+    </p>
+
+    <!--trabalhar com *ngIf/else-->
+    <h3>Uso da diretiva *ngIf/else e com ng-template</h3>
+    <p *ngIf = "exiba; else primeiraMiniView">
+        Texto exibido quando o checkbox estiver "ativado" - quando a condição for TRUE
+    </p>
+    <!--
+        quando a condição for avaliada como FALSE será exibida na nossa tela um novo recurso Angular: o famoso ng-template. O que é o ng-template?R: É um recurso de view criado dentro de outra view - popularmente chamado de "mini-view"
+    -->
+    <ng-template #primeiraMiniView>
+        Texto exibido quando o checkbox estiver "desativado" -quando a condição for FALSE. Dessa forma a <i>"mini-view"</i> ng-template é inserida no DOM e carregada na tela.
+    </ng-template>
+
+    <!-- uso da diretiva *ngIf/then/else para a exibição de conteudo, agora, dispostos somente nas "mini-views"-->
+    <h3>Uso da diretiva *ngIf/then/else</h3>
+    <p *ngIf = "exiba; then miniViewThen ; else miniViewElse">
+        ---------------------------------- este conteudo NUNCA será exibido!</p>
+
+    <ng-template #miniViewThen>
+        Texto exibido quando mo checkbox estiver "ativado" - quando a condição for TRUE
+    </ng-template>
+    <ng-template #miniViewElse>
+        Texto exibido quando o checkbox estiver "desativado" -quando a condição for FALSE. Dessa forma a <i>"mini-view"</i> ng-template é inserida no DOM e carregada na tela.
+    </ng-template>
+
+    <!-- observar o comportamento do atributo hidden aplicado an view com o o property binding-->
+    <h3>Uso e comportamento do atributo hidden</h3>
+    <p [hidden] = "exiba"><!-- Prop, qual é sue valor?R: FALSE -->
+        Texto exibido quando o checkbox estiver "desativado" - quando a condição for FALSE
+    </p>
+    <p [hidden] = "!exiba">
+        Texto exibido qunado o checkbos estiver "ativado" - quando a condição for TRUE
+    </p>
+
+</div>

@@ -1,0 +1,80 @@
+<div class = "content">
+    <h2>{{ tituloComp }}</h2>
+    <br />
+
+    <table class = "bordaTabela">
+        <thead>
+            <tr>
+                <th>Raiz Quadrada Um</th>
+                <th>Raiz Quadrada Dois</th>
+                <th>Raiz Quadrada Tres</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>Raiz quadrada de {{ raizUm }} é:</strong>
+                    <br />
+                    {{ raizUm | raizQuadrada }} 
+                </td>
+                <td>
+                    <strong>Raiz quadrada de {{ raizDois }} é: </strong>
+                    <br />
+                    {{ raizDois | raizQuadrada }}
+                </td>
+                <td>
+                    <strong>Raiz quadrada de {{ raizTres }} é: </strong>
+                    <br />
+                    {{ raizTres | raizQuadrada }}
+                </td>                
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!--
+    <div class = "content">
+    <h2>{{ tituloComp }}</h2>
+    <br />
+
+    <table class = "bordaTabela">
+        <thead>
+            <tr>
+                <th>Lowercase</th>
+                <th>Uppercase</th>
+                <th>Currency</th>
+                <th>Data Atual</th>
+                <th>Decimal</th>
+                <th>Json</th>
+                <th>Slice</th>
+                <th>Percetagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ umTexto | lowercase }}</td>
+                <td>{{ tituloComp | uppercase }}</td>
+                <td>
+                    {{ numFloat | currency: "USD" : "code" : "" : "en-US" }}
+                    <br />
+                    {{ numFloat | currency: "BRL" }}
+                </td>
+                <td>
+                    {{ umaData | date: "d/M/y" }}
+                    <br />
+                    {{ umaData | date: "shortTime" }}
+                    <br />
+                    {{ umaData | date: "H:m:s" }}
+                </td>
+                <td>{{ conjuntoNumerico | number: "3.1-5": "pt"}}</td>
+                <td>{{ conjuntoInfos | json }}</td>
+                <td>{{ mesesAno | slice: 2:6 }}</td>
+                <td>{{ numPercent | percent }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+-->
